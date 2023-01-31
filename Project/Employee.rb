@@ -23,12 +23,14 @@ end
 
 class Manager < Employee
 
+    attr_reader :employees
+
     def initialize(name, title, salary, boss)
-        super(name, title, salary, boss)
+        super
         @employees = []
     end
 
-    def manager_bonus(multiplier)
+    def bonus(multiplier)
 
         total_salary = []
 
@@ -43,11 +45,12 @@ class Manager < Employee
                 underlings = current.employees
 
                 underlings.each do |under|
+                    p under.name
                     total_salary << under.salary
                     queue << under
                 end
-            else
-                total_salary << current.salary
+            # else
+            #     total_salary << current.salary
             end
 
         end
