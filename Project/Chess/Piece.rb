@@ -17,7 +17,7 @@ class NullPiece < Piece
     attr_accessor :value
 
     def initialize
-        @value = -1 
+        @value = 0 
     end
 
 

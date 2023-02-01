@@ -18,9 +18,11 @@ class Board
 
     def print
 
-        @board.each do |row|
-            puts row.join(" ")
+        @board.each_with_index do |row,i|
+            puts "#{8 - i} #{row.join(" ")}"
         end
+
+        puts %(  A B C D E F G H)
 
     end
 
