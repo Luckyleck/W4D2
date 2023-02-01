@@ -3,5 +3,7 @@ class Rook < Piece
 
     def moves_dirs
 
+        ORTHOGONAL_DIRS
+
     end
 end

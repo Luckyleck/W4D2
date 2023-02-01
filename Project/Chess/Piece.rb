@@ -5,7 +5,11 @@ class Piece
     attr_accessor :value
 
     def initialize
-        @value = '▣'
+        @color = '▣'
+        @board = Board[]
+        @current_pos = Board.board.each_with_index do |row, i|
+            row.index(self)
+        end
     end
 
     def inspect
@@ -30,4 +34,13 @@ class NullPiece < Piece
 
 
 
+end
+
+asdf = [[1,2,3],[4,5,6]]
+
+# p asdf.index(3)
+
+
+p asdf.map do |row|
+    row.find(5)
 end
