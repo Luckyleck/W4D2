@@ -5,7 +5,15 @@ class Piece
     attr_accessor :value
 
     def initialize
-        @value = 1
+        @value = '▣'
+    end
+
+    def inspect
+        @value
+    end
+
+    def to_s
+        @value.to_s
     end
 
 
@@ -17,7 +25,7 @@ class NullPiece < Piece
     attr_accessor :value
 
     def initialize
-        @value = 0 
+        @value = '▢' 
     end
 
 
